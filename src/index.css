@@ -2,10 +2,10 @@
 body {
   margin: 0;
   font-family: 'Roboto Mono', monospace;
-  background-color: #0a1930 !important
+  background-color: #0a1930 !important;
+  color: #fff !important;
 
 }
-
 
 a {
   text-decoration: none;
@@ -30,3 +30,8 @@ header span {
   border: 1px solid #64ffda !important;
   font-size: 0.8rem !important;
   }
+
+  /* About */
+.img:hover {
+  filter: hue-rotate(0deg) !important;
+}
