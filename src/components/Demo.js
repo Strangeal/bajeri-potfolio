@@ -18,9 +18,14 @@ const Demo = () => {
 
   const menuItems = [
     {
+      name: "Home",
+      num: "00",
+      path: "/",
+    },
+    {
       name: "About",
       num: "01",
-      path: "/",
+      path: "/about",
     },
     {
       name: "Experience",
