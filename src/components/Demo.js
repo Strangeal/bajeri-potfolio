@@ -20,22 +20,22 @@ const Demo = () => {
     {
       name: "Home",
       num: "00",
-      path: "/",
+      path: "#Home",
     },
     {
       name: "About",
       num: "01",
-      path: "/about",
+      path: "#about",
     },
     {
       name: "Experience",
       num: "02",
-      path: "/experience",
+      path: "#experience",
     },
     {
       name: "Contact",
       num: "03",
-      path: "/contact",
+      path: "contact",
     },
   ];
   return (
