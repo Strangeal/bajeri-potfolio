@@ -1,26 +1,60 @@
 import {
   Card,
-  CardActionArea,
   CardActions,
   CardContent,
   CardMedia,
   Container,
-  Divider,
   Grid,
   Typography,
 } from "@mui/material";
 import { Box } from "@mui/system";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
+import { Link } from "react-router-dom";
 
 const Experience = () => {
-  const styles = {
-    img: {
-      width: "100%",
+  const projects = [
+    {
+      project_name: "Clickbank",
+      project_live_link: "https://strangeal.github.io/clickbank/index.html",
+      project_description:
+        "Clickbank is an affiliate marketing platform with a vast affiliate marketplace. They enable businesses with great products to connect with elite affiliates who can promote those products. They have e-commerce tools that helps product owners sell more with less work, and their marketplace helps marketers and aspiring entrepreneurs looking for new ways to earn an income online!. For nearly 25 years, ClickBank has been a trusted global partner for product sellers and affiliate marketers looking to build, market, and scale their businesses online.",
+      project_image:
+        "https://res.cloudinary.com/dxsom7jmx/image/upload/v1668783580/Meta%20tags/shot_fpwnaw.png",
+      project_tech: "HTML, CSS, JavaScript",
+      project_link: "https://github.com/Strangeal/clickbank",
     },
-  };
+    {
+      project_name: "ClinixGo",
+      project_live_link: "clinixgo.up.railway.app/",
+      project_description:
+        "The project is based on an app to book an appointment with a health specialist(Doctor). The doctor appointment booking app permits healthcare providers to manage their appointments with increased efficiency while giving reliable management. However, it displays all details of the patients, complete history of appointment, analyses the doctors, etc",
+      project_image:
+        "https://res.cloudinary.com/dxsom7jmx/image/upload/v1678831190/Screenshot_2023-03-14_at_14.58.21_pcoore.png",
+      project_tech:
+        "React, Redux, Ruby On Rails, PostgreSQL, Bootstrap, React-Router",
+      project_link: "https://github.com/Strangeal/ClinixGo/",
+    },
+    {
+      project_name: "Space Travel",
+      project_live_link: "https://spacehubx.netlify.app/",
+      project_description:
+        "This project is a web application for a company that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions.",
+      project_image:
+        "https://res.cloudinary.com/dxsom7jmx/image/upload/v1668859707/Meta%20tags/Screenshot_2022-11-19_at_07.05.18_kpxwpi.png",
+      project_tech: "HTML5, CSS, React, Redux, Sass, Jest-test",
+      project_link: "https://github.com/Strangeal/space-travelers-hub",
+    },
+  ];
   return (
-    <Container sx={{ mx: { xl: "6rem" }, my: "6rem", mb: { md: 0 } }}>
+    <Container
+      id="experience"
+      sx={{
+        mx: { xl: "6rem" },
+        my: "6rem",
+        display: "grid",
+      }}
+    >
       <Box sx={{ mx: { xs: 4 } }}>
         <Typography variant="body1" component="h6" sx={{ color: "#ccd6f6" }}>
           <Typography variant="span" sx={{ color: "#64ffda" }}>
@@ -37,60 +71,108 @@ const Experience = () => {
       <Card
         elevation={0}
         sx={{
-          bgcolor: "#e0e0e00a",
+          bgcolor: "transparent",
+          ":hover": "none",
           color: "#ccd6f6",
           borderRadius: 0,
-          mx: { xs: 4, md: "" },
+          mx: { xs: 4 },
         }}
       >
-        <CardActionArea>
-          <Grid container>
+        <div>
+          {projects.map((item) => (
             <Grid
-              item
-              xs={12}
-              md={6}
+              container
               sx={{
-                display: { md: "flex" },
-                alignItems: { md: "" },
-                p: { md: "1rem" },
-                width: { md: "80%" },
-                mx: { md: "auto" },
+                bgcolor: { xxs: "#e0e0e00a", md: "transparent" },
+                alignItems: { md: "center" },
+                mb: { xxs: "3rem", md: "7rem", mmd: "4rem" },
               }}
             >
-              <CardMedia
-                component="img"
-                image="https://res.cloudinary.com/dxsom7jmx/image/upload/v1668783580/Meta%20tags/shot_fpwnaw.png"
-                alt="Project 1"
-                sx={styles.img}
-              />
-            </Grid>
+              <Grid
+                item
+                xs={12}
+                md={7}
+                sx={{
+                  display: { md: "flex" },
+                  alignItems: { md: "" },
+                  width: { md: "50%", lg: "45%", xl: "40%" },
+                }}
+              >
+                <CardMedia
+                  component="img"
+                  image={item.project_image}
+                  alt={item.project_name}
+                />
+              </Grid>
 
-            <Grid item xs={12} md={6} sx={{ py: { md: "1rem" } }}>
-              <CardContent sx={{ py: { md: "0.3rem" } }}>
-                <Typography gutterBottom variant="h5" component="h2">
-                  Clickbank
-                </Typography>
-                <Typography
-                  variant="body2"
-                  sx={{ color: "#8892af", fontFamily: "sans-serif" }}
+              <Grid
+                item
+                xs={12}
+                md={12}
+                sx={{
+                  position: { md: "absolute" },
+                  display: { md: "flex" },
+                  flexDirection: { md: "column" },
+                  alignItems: { md: "end" },
+                  m: { md: "auto" },
+                  mr: { md: 0 },
+                  right: { md: 4, xl: 20, xl: 188, "2xl": 320 },
+                  width: { md: "53%", lg: "52%", xl: "40%", "2xl": "38%" },
+                  pr: { md: "2rem" },
+                }}
+              >
+                <CardContent
+                  sx={{
+                    textAlign: { md: "right" },
+                  }}
                 >
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
-                  tempore quaerat ipsam aut consectetur, sequi odit cupiditate
-                  beatae labore quae temporibus, aliquam aperiam explicabo! Eius
-                  cupiditate in explicabo culpa debitis.
-                </Typography>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    {item.project_name}
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    sx={{
+                      color: "#8892af",
+                      fontFamily: "sans-serif",
+                      bgcolor: { md: "#112240" },
+                      p: { md: "1rem" },
+                    }}
+                  >
+                    {item.project_description}
+                  </Typography>
 
-                <Typography variant="body2" sx={{ mt: 3 }}>
-                  VsCode Sublime Text Atom iTerm2 Hyper
-                </Typography>
-              </CardContent>
-              <CardActions sx={{ mb: { xxs: 3, md: 0 } }}>
-                <GitHubIcon className="card-icon" />
-                <OpenInNewIcon className="card-icon" />
-              </CardActions>
+                  <Typography
+                    variant="body2"
+                    sx={{
+                      mt: 1,
+                      m: { md: "auto" },
+                      mr: { md: 0 },
+                      width: { md: "70%" },
+                      color: "#8892af",
+                    }}
+                  >
+                    {item.project_tech}
+                  </Typography>
+                </CardContent>
+                <CardActions
+                  sx={{
+                    mb: { xxs: 3, md: 0 },
+                    mr: { md: "1rem" },
+                    float: { md: "right" },
+                    color: "#8892af",
+                  }}
+                >
+                  <Link to={item.project_link} className="card-icon">
+                    <GitHubIcon />
+                  </Link>
+                  <Link to={item.project_live_link} className="card-icon">
+                    <OpenInNewIcon />
+                  </Link>
+                </CardActions>
+              </Grid>
             </Grid>
-          </Grid>
-        </CardActionArea>
+          ))}
+        </div>
       </Card>
     </Container>
   );
