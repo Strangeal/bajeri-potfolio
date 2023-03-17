@@ -15,9 +15,11 @@ export const theme = createTheme({
       xs: 480,
       sm: 600,
       md: 768,
+      mmd: 900,
       lg: 1024,
       xl: 1280,
-      xxl: 1536,
+      "2xl": 1440,
+      "3xl": 1536,
     },
   },
 });
