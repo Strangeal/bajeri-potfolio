@@ -32,19 +32,27 @@ const Contact = () => {
     },
   };
   const socials = [
-    { name: <GitHubIcon /> },
-    { name: <LinkedInIcon /> },
-    { name: <AlternateEmailIcon /> },
-    { name: <TwitterIcon /> },
-    { name: <InstagramIcon /> },
+    { name: <GitHubIcon />, link: "https://github.com/Strangeal" },
+    {
+      name: <LinkedInIcon />,
+      link: "https://www.linkedin.com/in/justice-bajeri-0b7211243/",
+    },
+    { name: <AlternateEmailIcon />, link: "mailto:bajerijustice@gmail.com" },
+    { name: <TwitterIcon />, link: "https://twitter.com/Str_angeal" },
+    { name: <InstagramIcon />, link: "https://www.instagram.com" },
   ];
+
   return (
     <Container id="contact">
       <Grid container>
         <Grid
           item
           xs={12}
-          sx={{ textAlign: "center", mx: { xs: 4 }, mt: { md: "6rem" } }}
+          sx={{
+            textAlign: "center",
+            mx: { xs: 4 },
+            mt: { md: "6rem", mmd: "7rem", lg: "8rem", xl: "11rem" },
+          }}
         >
           <Typography variant="body1" component="h6" sx={{ color: "#64ffda" }}>
             <Typography variant="span">04.</Typography>
@@ -67,10 +75,10 @@ const Contact = () => {
               mx: "auto",
             }}
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil alias
-            doloribus, nostrum quia cupiditate tenetur numquam! Natus inventore
-            cumque magnam dolorum ab beatae est saepe commodi! Necessitatibus
-            maxime ad praesentium?
+            I am currently searching for new job opportunities where I can apply
+            my skills and continue to develop as a professional.I am always open
+            to discussing new options and exploring how we can work together to
+            achieve great things. Let's connect!
           </Typography>
 
           <Button
@@ -96,7 +104,7 @@ const Contact = () => {
               {socials.map((icon, index) => (
                 <ListItem key={index} sx={{ px: 1.2 }}>
                   <Link
-                    to=""
+                    to={icon.link}
                     style={styles.social}
                     className="social-icon"
                     key={index}
@@ -116,7 +124,11 @@ const Contact = () => {
                   display: { xxs: "none", md: "block" },
                 }}
               >
-                <Link to="" className="floatEmail" style={styles.floatEmail}>
+                <Link
+                  to="mailto:bajerijustice@gmail.com"
+                  className="floatEmail"
+                  style={styles.floatEmail}
+                >
                   bajerijustice@gmail.com
                 </Link>
                 <Divider orientation="vertical" />
@@ -125,7 +137,11 @@ const Contact = () => {
 
             <Box sx={{ mx: 5 }}>
               <Typography variant="body2" sx={{ color: "#64ffda" }}>
-                <Link to="" className="footText" style={styles.footText}>
+                <Link
+                  to="https://github.com/strangeal"
+                  className="footText"
+                  style={styles.footText}
+                >
                   Designed & Built by Bajeri Justice
                 </Link>
               </Typography>
