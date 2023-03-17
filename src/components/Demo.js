@@ -20,7 +20,7 @@ const Demo = () => {
     {
       name: "Home",
       num: "00",
-      path: "#Home",
+      path: "#home",
     },
     {
       name: "About",
@@ -35,23 +35,23 @@ const Demo = () => {
     {
       name: "Contact",
       num: "03",
-      path: "contact",
+      path: "#contact",
     },
   ];
   return (
     <>
       {menuItems.map((item, index) => (
         <ListItem key={index} style={styles.linkItem}>
-          <Typography style={styles.linkSpan} variant="span">
+          <Typography style={styles.linkSpan} sx={{ mr: 0.5 }} variant="span">
             {item.num}.
           </Typography>
-          <Link
-            to={item.path}
+          <a
+            href={item.path}
             style={styles.link}
             className={location.pathname === item.path ? "active" : null}
           >
             {item.name}
-          </Link>
+          </a>
         </ListItem>
       ))}
       <Button sx={{ px: 5 }} className="btn" size="large">
