@@ -4,7 +4,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Demo from "./Demo";
 import LogoDevIcon from "@mui/icons-material/LogoDev";
 
-const drawerWidth = 240;
+const drawerWidth = 280;
 const NavDrawer = () => {
   const [open, setOpen] = useState(false);
   const styles = {
@@ -25,8 +25,12 @@ const NavDrawer = () => {
           "& .MuiDrawer-paper": { width: drawerWidth, bgcolor: styles.drawer },
         }}
       >
-        <Typography>Hello drawer</Typography>
-        <List style={styles.drawList} onClick={() => setOpen(false)}>
+        <List
+          className="ul-draw"
+          style={styles.drawList}
+          onClick={() => setOpen(false)}
+          sx={{ m: "auto", mt: 0 }}
+        >
           <Demo />
         </List>
       </Drawer>
@@ -44,6 +48,7 @@ const NavDrawer = () => {
             fontSize: "2rem",
           }}
         />
+
         <IconButton onClick={() => setOpen(!open)}>
           <MenuIcon sx={{ color: "#64ffda", fontSize: "2rem" }} />
         </IconButton>
