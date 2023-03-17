@@ -1,9 +1,9 @@
-import { Button, Grid, Typography } from "@mui/material";
+import { Button, Grid, Link, Typography } from "@mui/material";
 import { Container } from "@mui/system";
 
 const Home = () => {
   return (
-    <Container sx={{ mx: { sx: 0, xl: "8rem" } }}>
+    <Container id="home" sx={{ mx: { sx: 0, xl: "8rem" } }}>
       <Grid container sx={{ m: 0 }}>
         <Grid
           item
@@ -61,17 +61,25 @@ const Home = () => {
             expertise that allow me to create and maintain both the front-end
             and back-end of a website.
           </Typography>
-          <Button
+          <Link
+            href="https://www.linkedin.com/in/justice-bajeri/"
+            button
             sx={{
-              py: { xxs: 1.8 },
+              py: { xxs: 2.8 },
               px: { xxs: 7 },
               mt: 6,
               width: { xxs: "max-content" },
+              textDecoration: "none",
+              borderRadius: 1,
+              "&:hover": {
+                backgroundColor: "#a6fae632",
+                color: "#fff",
+              },
             }}
             className="btn"
           >
             Get in touch
-          </Button>
+          </Link>
         </Grid>
       </Grid>
     </Container>
