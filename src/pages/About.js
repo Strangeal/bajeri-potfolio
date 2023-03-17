@@ -27,7 +27,7 @@ const About = () => {
     { name: "Ruby on Rails" },
   ];
   return (
-    <Container sx={{ mt: { md: "6rem" }, mx: { xl: "6rem" } }}>
+    <Container id="about" sx={{ mt: { md: "3rem" }, mx: { xl: "6rem" } }}>
       <Grid container spacing={3}>
         <Grid
           item
@@ -57,24 +57,27 @@ const About = () => {
               sx={{ mt: 4, fontFamily: "sans-serif" }}
             >
               Hello! My name is Justice, and I am a multi-skilled full-stack
-              developer with hands-on experience in project development. I am a
-              good communicator and team player. I enjoy pair programming,
-              watching movies, listening to music and writing tutorials.
+              developer with hands-on experience in project development. I have
+              one year of experience working with both front-end technologies
+              (React/Redux) and back-end technologies (Ruby on Rails). I am a
+              good communicator and a team player, and I enjoy pair programming.
             </Typography>
             <Typography
               variant="body1"
               sx={{ mt: 2, fontFamily: "sans-serif" }}
             >
-              I am currently enrolled in a distance-learning software
-              development program that uses pair programming and actual client
-              projects to teach development. Over the past few months, I have
-              been deeply engrossed in remote development, creating everything
-              from landing pages to APIs and JavaScript projects.
+              Over the years, I have built more than 20 projects, ranging from
+              small to full-stack projects. Each project has presented its own
+              unique set of challenges, from technical obstacles to pair
+              programming challenges. These challenges have honed my skills in
+              problem-solving, collaboration, and innovation. By continually
+              pushing myself to learn new technologies and techniques, I have
+              been able to expand my capabilities and take on increasingly
+              complex projects.
             </Typography>
             <Typography sx={{ mt: 2, fontFamily: "sans-serif" }}>
-              In addition, I have spent the last couple of years learning
-              remotely to acquire soft skills such as communication, teamwork,
-              leadership, critical thinking, problem-solving, and more.
+              In my free time, I enjoy watching movies, listening to music, and
+              writing tutorials.
             </Typography>
             <Typography sx={{ mt: 2, fontFamily: "sans-serif" }}>
               I am currently working on improving my writing skills to create
@@ -82,8 +85,7 @@ const About = () => {
             </Typography>
             <Box sx={{ mt: 2 }}>
               <Typography sx={{ fontFamily: "sans-serif" }}>
-                With years of experience in the tech industry, I have gained
-                extensive knowledge of the following:
+                Here are a few technologies I've been working with recently:
               </Typography>
               <Grid container sx={{ mt: 2 }}>
                 {skills.map((skill, index) => (
@@ -128,6 +130,7 @@ const About = () => {
           {/* </div> */}
         </Grid>
         <Box
+          className="slideanim"
           sx={{
             mx: "auto",
             my: { xxs: 5 },
@@ -136,9 +139,9 @@ const About = () => {
           }}
         >
           <img
-            className="img"
+            className="img slideanim"
             style={styles.img}
-            src="https://img.freepik.com/free-photo/portrait-man-with-nice-smile_23-2148780121.jpg?"
+            src="https://res.cloudinary.com/dxsom7jmx/image/upload/v1679052423/photo_2023-03-17_04.24.56_kjjtgy.jpg"
             width="100%"
             alt="profile"
           />
