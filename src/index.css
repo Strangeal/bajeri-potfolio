@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
+html {
+
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: 'Roboto Mono', monospace;
+  background-color: #0a1930 !important;
+  color: #fff !important;
+
+}
+
+ul li .active:hover {
+  color: #64ffda !important;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+
+/* Navbar */
+header {
+  background-color: #0a1930 !important
+}
+
+body > div.MuiDrawer-root.MuiDrawer-modal.MuiModal-root.css-1p0uwae-MuiModal-root-MuiDrawer-root > div.MuiPaper-root.MuiPaper-elevation.MuiPaper-elevation0.MuiDrawer-paper.MuiDrawer-paperAnchorLeft.css-198i5h1-MuiPaper-root-MuiDrawer-paper > ul > li > .active{
+color:#64ffda;
+}
+
+header span {
+  color: #64ffda;
+}
+
+.btn {
+  color: #64ffda !important;
+  border: 1px solid #64ffda !important;
+  font-size: 0.8rem !important;
+  }
+
+  /* About */
+.img:hover {
+  filter: hue-rotate(0deg) !important;
+}
+
+.card-icon {
+  color: #8892af;
+}
+
+.footText:hover,
+.social-icon:hover,
+.card-icon:hover,
+.floatEmail:hover {
+  color: #64ffda !important;
+}
+
+.ul-draw li {
+  font-size: 1rem!important;
+}
+
+.ul-draw button {
+  margin: auto;
+  margin-top: 50%;
+}
+
+footer {
+  padding: 2rem;
+}
+
+.logo {
+  font-family: 'Tangerine', cursive;
+  width: max-content;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 900;
+}
+.logo p {
+  margin: 0
+} 
+
+
+
+
