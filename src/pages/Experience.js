@@ -45,6 +45,16 @@ const Experience = () => {
       project_tech: "HTML5, CSS, React, Redux, Sass, Jest-test",
       project_link: "https://github.com/Strangeal/space-travelers-hub",
     },
+    {
+      project_name: "BookStore",
+      project_live_link: "https://bookstorecmstrangeal.netlify.app/",
+      project_description:
+        "The Bookstore is a website similar to the Awesome Books website built in the previous module, Which user can use to add their favorite bookstore",
+      project_image:
+        "https://res.cloudinary.com/dxsom7jmx/image/upload/v1668812401/Meta%20tags/Screenshot_2022-11-18_at_17.59.38_mo8cyd.png",
+      project_tech: "HTML5, CSS, React, Redux, Sass, Jest-test",
+      project_link: "https://github.com/Strangeal/bookstore",
+    },
   ];
   return (
     <Container
@@ -167,10 +177,18 @@ const Experience = () => {
                     color: "#8892af",
                   }}
                 >
-                  <Link to={item.project_link} className="card-icon">
+                  <Link
+                    to={item.project_link}
+                    target="_blank"
+                    className="card-icon"
+                  >
                     <GitHubIcon />
                   </Link>
-                  <Link to={item.project_live_link} className="card-icon">
+                  <Link
+                    to={item.project_live_link}
+                    target="_blank"
+                    className="card-icon"
+                  >
                     <OpenInNewIcon />
                   </Link>
                 </CardActions>

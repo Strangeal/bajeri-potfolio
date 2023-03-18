@@ -67,6 +67,7 @@ const Home = () => {
           </Typography>
           <Link
             href="https://www.linkedin.com/in/justice-bajeri/"
+            target="_blank"
             sx={{
               py: { xxs: 2.8 },
               px: { xxs: 7 },

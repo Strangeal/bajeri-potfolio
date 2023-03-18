@@ -5,7 +5,6 @@ import {
   Grid,
   List,
   ListItem,
-  ListItemText,
   Typography,
 } from "@mui/material";
 import { Container } from "@mui/system";
@@ -81,13 +80,17 @@ const Contact = () => {
             achieve great things. Let's connect!
           </Typography>
 
-          <Button
-            className="btn"
-            sx={{ py: { xxs: 1.8 }, px: { xxs: 7 }, mb: 5 }}
+          <Link
+            to="https://www.linkedin.com/in/justice-bajeri-0b7211243/"
+            target="_blank"
           >
-            Say Hello
-          </Button>
-
+            <Button
+              className="btn"
+              sx={{ py: { xxs: 1.8 }, px: { xxs: 7 }, mb: 5 }}
+            >
+              Say Hello
+            </Button>
+          </Link>
           <footer>
             <List
               sx={{
@@ -126,6 +129,7 @@ const Contact = () => {
               >
                 <Link
                   to="mailto:bajerijustice@gmail.com"
+                  target="_blank"
                   className="floatEmail"
                   style={styles.floatEmail}
                 >
@@ -139,6 +143,7 @@ const Contact = () => {
               <Typography variant="body2" sx={{ color: "#64ffda" }}>
                 <Link
                   to="https://github.com/strangeal"
+                  target="_blank"
                   className="footText"
                   style={styles.footText}
                 >
