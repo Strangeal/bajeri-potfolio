@@ -22,6 +22,7 @@ const Home = () => {
         >
           <Typography sx={{ color: "#64ffda" }}>Hello, my name is </Typography>
           <Typography
+            className="tracking-in-expand"
             sx={{
               fontSize: {
                 xxs: "clamp(40px, 8vw, 60px)",
