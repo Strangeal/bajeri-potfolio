@@ -7,7 +7,6 @@ import {
 } from "@mui/material";
 import Demo from "./Demo";
 import NavDrawer from "./NavDrawer";
-import LogoDevIcon from "@mui/icons-material/LogoDev";
 import { useTheme } from "@emotion/react";
 
 const Nav = () => {
@@ -25,9 +24,9 @@ const Nav = () => {
             sx={{ mx: { md: 2, xl: 4 }, my: { md: 2 } }}
           >
             <Typography variant="h6" sx={{ flexGrow: 1 }}>
-              <LogoDevIcon
-                sx={{ color: "#64ffda", flexGrow: 1, fontSize: { md: "2rem" } }}
-              />
+              <div className="logo">
+                <p>JB</p>
+              </div>
             </Typography>
             <List sx={{ display: "flex" }}>
               <Demo />

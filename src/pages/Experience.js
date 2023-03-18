@@ -18,7 +18,7 @@ const Experience = () => {
       project_name: "Clickbank",
       project_live_link: "https://strangeal.github.io/clickbank/index.html",
       project_description:
-        "Clickbank is an affiliate marketing platform with a vast affiliate marketplace. They enable businesses with great products to connect with elite affiliates who can promote those products. They have e-commerce tools that helps product owners sell more with less work, and their marketplace helps marketers and aspiring entrepreneurs looking for new ways to earn an income online!. For nearly 25 years, ClickBank has been a trusted global partner for product sellers and affiliate marketers looking to build, market, and scale their businesses online.",
+        "Clickbank is an affiliate marketing platform enable businesses with great products to connect with elite affiliates who can promote those products. They have e-commerce tools that helps product owners sell more with less work, and their marketplace helps marketers and aspiring entrepreneurs looking for new ways to earn an income online!.",
       project_image:
         "https://res.cloudinary.com/dxsom7jmx/image/upload/v1668783580/Meta%20tags/shot_fpwnaw.png",
       project_tech: "HTML, CSS, JavaScript",
@@ -51,6 +51,7 @@ const Experience = () => {
       id="experience"
       sx={{
         mx: { xl: "6rem" },
+        ml: { "2xl": "13rem" },
         my: "6rem",
         display: "grid",
       }}
@@ -79,7 +80,7 @@ const Experience = () => {
         }}
       >
         <div>
-          {projects.map((item) => (
+          {projects.map((item, index) => (
             <Grid
               container
               sx={{
@@ -87,6 +88,7 @@ const Experience = () => {
                 alignItems: { md: "center" },
                 mb: { xxs: "3rem", md: "7rem", mmd: "4rem" },
               }}
+              key={index}
             >
               <Grid
                 item
@@ -116,8 +118,8 @@ const Experience = () => {
                   alignItems: { md: "end" },
                   m: { md: "auto" },
                   mr: { md: 0 },
-                  right: { md: 4, xl: 20, xl: 188, "2xl": 320 },
-                  width: { md: "53%", lg: "52%", xl: "40%", "2xl": "38%" },
+                  right: { md: 4, xl: 20, xl: 132, "2xl": 180 },
+                  width: { md: "53%", lg: "52%", xl: "43%", "2xl": "38%" },
                   pr: { md: "2rem" },
                 }}
               >
@@ -126,6 +128,9 @@ const Experience = () => {
                     textAlign: { md: "right" },
                   }}
                 >
+                  <Typography variant="body2" sx={{ mb: 1, color: "#64ffda" }}>
+                    Featured Project
+                  </Typography>
                   <Typography gutterBottom variant="h5" component="h2">
                     {item.project_name}
                   </Typography>

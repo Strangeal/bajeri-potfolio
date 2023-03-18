@@ -3,7 +3,10 @@ import { Container } from "@mui/system";
 
 const Home = () => {
   return (
-    <Container id="home" sx={{ mx: { sx: 0, xl: "8rem" } }}>
+    <Container
+      id="home"
+      sx={{ mx: { sx: 0, xl: "8rem" }, ml: { "2xl": "14.5rem" } }}
+    >
       <Grid container sx={{ m: 0 }}>
         <Grid
           item
@@ -63,7 +66,6 @@ const Home = () => {
           </Typography>
           <Link
             href="https://www.linkedin.com/in/justice-bajeri/"
-            button
             sx={{
               py: { xxs: 2.8 },
               px: { xxs: 7 },

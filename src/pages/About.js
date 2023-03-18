@@ -27,7 +27,10 @@ const About = () => {
     { name: "Ruby on Rails" },
   ];
   return (
-    <Container id="about" sx={{ mt: { md: "3rem" }, mx: { xl: "6rem" } }}>
+    <Container
+      id="about"
+      sx={{ mt: { md: "3rem" }, mx: { xl: "6rem" }, ml: { "2xl": "13rem" } }}
+    >
       <Grid container spacing={3}>
         <Grid
           item
@@ -38,7 +41,6 @@ const About = () => {
             mx: { xs: 4, md: 6 },
           }}
         >
-          {/* <div> */}
           <div className="heading" style={styles.heading}>
             <Typography variant="h6" sx={{ mr: 2, color: "#ccd6f6" }}>
               <Typography variant="span" sx={{ color: "#64ffda" }}>
@@ -127,7 +129,6 @@ const About = () => {
               </Grid>
             </Box>
           </Box>
-          {/* </div> */}
         </Grid>
         <Box
           className="slideanim"
@@ -136,6 +137,7 @@ const About = () => {
             my: { xxs: 5 },
             width: { xxs: "60%", xs: "40%", sm: "35%", md: "30%" },
             display: { md: "flex", alignItems: "center" },
+            mr: { md: 4, xl: 0, "2xl": 0 },
           }}
         >
           <img

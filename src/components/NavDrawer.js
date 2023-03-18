@@ -2,7 +2,6 @@ import { List, Drawer, Typography, Box, IconButton } from "@mui/material";
 import { useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import Demo from "./Demo";
-import LogoDevIcon from "@mui/icons-material/LogoDev";
 
 const drawerWidth = 280;
 const NavDrawer = () => {
@@ -21,15 +20,18 @@ const NavDrawer = () => {
         onClose={() => setOpen(false)}
         elevation={0}
         sx={{
-          width: drawerWidth,
-          "& .MuiDrawer-paper": { width: drawerWidth, bgcolor: styles.drawer },
+          width: { xxs: drawerWidth, xs: drawerWidth + 100 },
+          "& .MuiDrawer-paper": {
+            width: { xxs: drawerWidth, xs: drawerWidth + 100 },
+            bgcolor: styles.drawer,
+          },
         }}
       >
         <List
           className="ul-draw"
           style={styles.drawList}
           onClick={() => setOpen(false)}
-          sx={{ m: "auto", mt: 0 }}
+          sx={{ m: "auto", mt: 0, pt: "5rem" }}
         >
           <Demo />
         </List>
@@ -42,12 +44,9 @@ const NavDrawer = () => {
           p: { xxs: 2 },
         }}
       >
-        <LogoDevIcon
-          sx={{
-            color: "#64ffda",
-            fontSize: "2rem",
-          }}
-        />
+        <div className="logo">
+          <p>JB</p>
+        </div>
 
         <IconButton onClick={() => setOpen(!open)}>
           <MenuIcon sx={{ color: "#64ffda", fontSize: "2rem" }} />

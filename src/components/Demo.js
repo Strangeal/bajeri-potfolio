@@ -1,5 +1,5 @@
-import { Button, ListItem, Typography } from "@mui/material";
-import { Link, useLocation } from "react-router-dom";
+import { Button, ListItem, Typography, Link } from "@mui/material";
+import { useLocation } from "react-router-dom";
 
 const Demo = () => {
   const location = useLocation();
@@ -38,25 +38,47 @@ const Demo = () => {
       path: "#contact",
     },
   ];
+
   return (
     <>
       {menuItems.map((item, index) => (
-        <ListItem key={index} style={styles.linkItem}>
-          <Typography style={styles.linkSpan} sx={{ mr: 0.5 }} variant="span">
-            {item.num}.
-          </Typography>
-          <a
-            href={item.path}
-            style={styles.link}
-            className={location.pathname === item.path ? "active" : null}
+        <ListItem
+          key={index}
+          style={styles.linkItem}
+          sx={{ textAlign: { xxs: "center" } }}
+        >
+          <Typography
+            style={styles.linkSpan}
+            sx={{ mr: 0.5, width: { xxs: "100%" } }}
+            variant="span"
           >
-            {item.name}
-          </a>
+            <Typography variant="span" sx={{ fontSize: 12 }}>
+              {item.num}.
+            </Typography>
+            <Link
+              sx={{
+                display: { xxs: "block", md: "revert" },
+                mt: { xxs: 0.5 },
+              }}
+              href={item.path}
+              style={styles.link}
+              className={location.pathname === item.path ? "active" : null}
+            >
+              {item.name}
+            </Link>
+          </Typography>
         </ListItem>
       ))}
-      <Button sx={{ px: 5 }} className="btn" size="large">
-        Resume
-      </Button>
+      <a
+        href="https://drive.google.com/file/d/1THbLM99uo60P02WoFfXopgnDFTTvkPF7/view?usp=sharing"
+        target="_blank"
+        id="downloadBtn"
+        type="button"
+      >
+        <Button sx={{ px: 5 }} className="btn" size="large">
+          Resume
+        </Button>
+      </a>
     </>
   );
 };
