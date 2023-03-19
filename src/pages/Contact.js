@@ -8,14 +8,10 @@ import {
   Typography,
 } from "@mui/material";
 import { Container } from "@mui/system";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import InstagramIcon from "@mui/icons-material/Instagram";
 import { Link } from "react-router-dom";
 import StarOutlineIcon from "@mui/icons-material/StarOutline";
 import ForkRightIcon from "@mui/icons-material/ForkRight";
+import data from "../db/data";
 
 const Contact = () => {
   const styles = {
@@ -30,17 +26,6 @@ const Contact = () => {
       color: "#8892af",
     },
   };
-  const socials = [
-    { name: <GitHubIcon />, link: "https://github.com/Strangeal" },
-    {
-      name: <LinkedInIcon />,
-      link: "https://www.linkedin.com/in/justice-bajeri-0b7211243/",
-    },
-    { name: <AlternateEmailIcon />, link: "mailto:bajerijustice@gmail.com" },
-    { name: <TwitterIcon />, link: "https://twitter.com/Str_angeal" },
-    { name: <InstagramIcon />, link: "https://www.instagram.com" },
-  ];
-
   return (
     <Container id="contact">
       <Grid container>
@@ -104,7 +89,7 @@ const Contact = () => {
               }}
               className="social-float"
             >
-              {socials.map((icon, index) => (
+              {data.socials.map((icon, index) => (
                 <ListItem key={index} sx={{ px: 1.2 }}>
                   <Link
                     to={icon.link}

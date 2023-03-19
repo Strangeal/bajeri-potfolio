@@ -1,6 +1,7 @@
 import { Container, Divider, Grid, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
+import data from "../db/data";
 
 const About = () => {
   const styles = {
@@ -18,14 +19,6 @@ const About = () => {
     },
   };
 
-  const skills = [
-    { name: "JavaScript(ES6+)" },
-    { name: "ReactJs" },
-    { name: "Redux" },
-    { name: "SQL" },
-    { name: "Ruby" },
-    { name: "Ruby on Rails" },
-  ];
   return (
     <Container
       id="about"
@@ -90,7 +83,7 @@ const About = () => {
                 Here are a few technologies I've been working with recently:
               </Typography>
               <Grid container sx={{ mt: 2 }}>
-                {skills.map((skill, index) => (
+                {data.skills.map((skill, index) => (
                   <Grid
                     item
                     key={index}
@@ -131,7 +124,6 @@ const About = () => {
           </Box>
         </Grid>
         <Box
-          className="slideanim"
           sx={{
             mx: "auto",
             my: { xxs: 5 },
