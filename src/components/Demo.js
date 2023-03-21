@@ -71,6 +71,7 @@ const Demo = () => {
       ))}
       <a
         href="https://drive.google.com/file/d/1THbLM99uo60P02WoFfXopgnDFTTvkPF7/view?usp=sharing"
+        rel="noreferrer"
         target="_blank"
         id="downloadBtn"
         type="button"
