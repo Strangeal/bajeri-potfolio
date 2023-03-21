@@ -35,7 +35,7 @@ const Home = () => {
             }}
             variant="h1"
           >
-            Bajeri Justice.
+            Justice Bajeri.
           </Typography>
           <Typography
             sx={{
