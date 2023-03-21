@@ -18,10 +18,10 @@ const Form = () => {
         },
         body: JSON.stringify({ name, email, message }),
       });
+      setName("");
+      setEmail("");
+      setMessage("");
     }
-    setName("");
-    setEmail("");
-    setMessage("");
 
     if (!name) {
       setErrorName("Name is required");
