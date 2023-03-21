@@ -12,6 +12,7 @@ import { Link } from "react-router-dom";
 import StarOutlineIcon from "@mui/icons-material/StarOutline";
 import ForkRightIcon from "@mui/icons-material/ForkRight";
 import data from "../db/data";
+import Form from "../components/Form";
 
 const Contact = () => {
   const styles = {
@@ -27,42 +28,56 @@ const Contact = () => {
     },
   };
   return (
-    <Container id="contact">
-      <Grid container>
+    <Container id="contact" sx={{ px: { xs: 6, sm: 7, xl: 0 }, pl: { xl: 0 } }}>
+      <Typography
+        variant="body1"
+        component="h6"
+        sx={{ color: "#64ffda", textAlign: "center" }}
+      >
+        <Typography variant="span">04.</Typography>
+        What's Next?
+      </Typography>
+      <Typography
+        variant="h4"
+        sx={{
+          fontFamily: "sans-serif",
+          fontWeight: 800,
+          my: 2,
+          textAlign: "center",
+          mb: { md: "3rem" },
+        }}
+      >
+        Get In Touch
+      </Typography>
+
+      <Grid container sx={{ display: { md: "flex" } }}>
         <Grid
           item
           xs={12}
+          md={6}
           sx={{
             textAlign: "center",
-            mx: { xs: 4 },
-            mt: { md: "6rem", mmd: "7rem", lg: "8rem", xl: "11rem" },
+            m: "auto",
+            // mt: { md: "6rem", mmd: "7rem", lg: "8rem", xl: "11rem" },
           }}
         >
-          <Typography variant="body1" component="h6" sx={{ color: "#64ffda" }}>
-            <Typography variant="span">04.</Typography>
-            What's Next?
-          </Typography>
-          <Typography
-            variant="h4"
-            sx={{ fontFamily: "sans-serif", fontWeight: 800, my: 2, px: 5 }}
-          >
-            Get In Touch
-          </Typography>
           <Typography
             sx={{
               fontFamily: "sans-serif",
               fontWeight: 300,
               textAlign: "center",
-              mb: { xxs: 3, md: 8 },
+
               color: "#8892af",
-              width: { md: "70%", lg: "60%" },
-              mx: "auto",
+              // width: { md: "70%", lg: "60%" },
+              m: "auto",
+              mr: { mmd: 3 },
+              // ml: { mmd: 0 },
             }}
           >
             I am currently searching for new job opportunities where I can apply
-            my skills and continue to develop as a professional.I am always open
-            to discussing new options and exploring how we can work together to
-            achieve great things. Let's connect!
+            my skills and continue to develop as a professional. I am always
+            open to discussing new options and exploring how we can work
+            together to achieve great things. Let's connect!
           </Typography>
 
           <Link
@@ -71,89 +86,110 @@ const Contact = () => {
           >
             <Button
               className="btn"
-              sx={{ py: { xxs: 1.8 }, px: { xxs: 7 }, mb: 5 }}
+              sx={{
+                py: { xxs: 1.8 },
+                px: { xxs: 7 },
+                mt: { xxs: 3, md: 8 },
+                mb: 5,
+                display: { xxs: "inline", md: "none" },
+              }}
             >
               Say Hello
             </Button>
           </Link>
-          <footer>
-            <List
-              sx={{
-                width: "fit-content",
-                m: "auto",
-                display: { xxs: "flex", md: "block" },
-                position: { md: "fixed" },
-                left: { md: 10, xl: 57 },
-                bottom: { md: 90 },
-                zIndex: { md: 99 },
-              }}
-              className="social-float"
-            >
-              {data.socials.map((icon, index) => (
-                <ListItem key={index} sx={{ px: 1.2 }}>
-                  <Link
-                    to={icon.link}
-                    style={styles.social}
-                    className="social-icon"
-                    key={index}
-                    target="_blank"
-                  >
-                    {icon.name}
-                  </Link>
-                </ListItem>
-              ))}
-              <ListItem
-                sx={{
-                  position: { md: "fixed" },
-                  right: { md: -100, xl: -57 },
-                  bottom: { md: 181 },
-                  width: { md: "auto" },
-                  transform: { md: "rotate(90deg)" },
-                  display: { xxs: "none", md: "block" },
-                }}
-              >
-                <Link
-                  to="mailto:bajerijustice@gmail.com"
-                  target="_blank"
-                  className="floatEmail"
-                  style={styles.floatEmail}
-                >
-                  bajerijustice@gmail.com
-                </Link>
-                <Divider orientation="vertical" />
-              </ListItem>
-            </List>
-
-            <Box sx={{ mx: 5 }}>
-              <Typography variant="body2" sx={{ color: "#64ffda" }}>
-                <Link
-                  to="https://github.com/strangeal"
-                  target="_blank"
-                  className="footText"
-                  style={styles.footText}
-                >
-                  Designed & Built by Bajeri Justice
-                </Link>
-              </Typography>
-              <Typography
-                variant="span"
-                className="card-icon"
-                sx={{ fontWeight: 300, fontSize: 14, mr: 2 }}
-              >
-                <StarOutlineIcon sx={{ fontSize: 16, mx: 0.5 }} />
-                56
-              </Typography>
-              <Typography
-                variant="span"
-                className="card-icon"
-                sx={{ fontWeight: 300, fontSize: 14 }}
-              >
-                <ForkRightIcon sx={{ fontSize: 16, mx: 0.5 }} />8
-              </Typography>
-            </Box>
-          </footer>
+        </Grid>
+        <Grid
+          item
+          xs={12}
+          md={6}
+          sx={{
+            color: "#8892af",
+            textAlign: "center",
+            // mt: { md: "6rem", mmd: "7rem", lg: "8rem", xl: "11rem" },
+          }}
+        >
+          <div>
+            <Form />
+          </div>
         </Grid>
       </Grid>
+
+      <footer>
+        <List
+          sx={{
+            width: "fit-content",
+            m: "auto",
+            display: { xxs: "flex", md: "block" },
+            position: { md: "fixed" },
+            left: { md: 10, xl: 57 },
+            bottom: { md: 90 },
+            zIndex: { md: 99 },
+          }}
+          className="social-float"
+        >
+          {data.socials.map((icon, index) => (
+            <ListItem key={index} sx={{ px: 1.2 }}>
+              <Link
+                to={icon.link}
+                style={styles.social}
+                className="social-icon"
+                key={index}
+                target="_blank"
+              >
+                {icon.name}
+              </Link>
+            </ListItem>
+          ))}
+          <ListItem
+            sx={{
+              position: { md: "fixed" },
+              right: { md: -100, xl: -57 },
+              bottom: { md: 181 },
+              width: { md: "auto" },
+              transform: { md: "rotate(90deg)" },
+              display: { xxs: "none", md: "block" },
+            }}
+          >
+            <Link
+              to="mailto:bajerijustice@gmail.com"
+              target="_blank"
+              className="floatEmail"
+              style={styles.floatEmail}
+            >
+              bajerijustice@gmail.com
+            </Link>
+            <Divider orientation="vertical" />
+          </ListItem>
+        </List>
+
+        <Box sx={{ mx: 5, textAlign: "center" }}>
+          <Typography variant="body2" sx={{ color: "#64ffda" }}>
+            <Link
+              to="https://github.com/strangeal"
+              target="_blank"
+              className="footText"
+              style={styles.footText}
+            >
+              Designed & Built by Bajeri Justice
+            </Link>
+          </Typography>
+          <Typography
+            variant="span"
+            className="card-icon"
+            sx={{ fontWeight: 300, fontSize: 14, mr: 2 }}
+          >
+            <StarOutlineIcon sx={{ fontSize: 16, mx: 0.5 }} />
+            56
+          </Typography>
+          <Typography
+            variant="span"
+            className="card-icon"
+            sx={{ fontWeight: 300, fontSize: 14 }}
+          >
+            <ForkRightIcon sx={{ fontSize: 16, mx: 0.5 }} />8
+          </Typography>
+        </Box>
+      </footer>
     </Container>
   );
 };
