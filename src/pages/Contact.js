@@ -50,7 +50,7 @@ const Contact = () => {
         Get In Touch
       </Typography>
 
-      <Grid container sx={{ display: { md: "flex" } }}>
+      <Grid container sx={{ display: { xxs: "block", md: "flex" } }}>
         <Grid
           item
           xs={12}
@@ -58,7 +58,6 @@ const Contact = () => {
           sx={{
             textAlign: "center",
             m: "auto",
-            // mt: { md: "6rem", mmd: "7rem", lg: "8rem", xl: "11rem" },
           }}
         >
           <Typography
@@ -66,12 +65,10 @@ const Contact = () => {
               fontFamily: "sans-serif",
               fontWeight: 300,
               textAlign: "center",
-
               color: "#8892af",
-              // width: { md: "70%", lg: "60%" },
               m: "auto",
               mr: { mmd: 3 },
-              // ml: { mmd: 0 },
+              ml: { "2xl": 7 },
             }}
           >
             I am currently searching for new job opportunities where I can apply
@@ -105,12 +102,9 @@ const Contact = () => {
           sx={{
             color: "#8892af",
             textAlign: "center",
-            // mt: { md: "6rem", mmd: "7rem", lg: "8rem", xl: "11rem" },
           }}
         >
-          <div>
-            <Form />
-          </div>
+          <Form />
         </Grid>
       </Grid>
 
