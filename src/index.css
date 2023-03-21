@@ -80,6 +80,27 @@ footer {
   margin: 0
 } 
 
+form {
+  background-color: #e0e0e00a;
+  padding: 1rem;
+}
+
+input, textarea{
+  color: #fff !important;
+  border-color: #64ffda !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition: background-color 600000s 0s, color 600000s 0s;
+}
+
+.error {
+  color: red !important;
+  font-size: 12px;
+  text-align: left;
+}
+
 
 .tracking-in-expand {
 	-webkit-animation: tracking-in-expand 1.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) 1s both;

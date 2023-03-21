@@ -22,6 +22,12 @@ export const theme = createTheme({
       "3xl": 1536,
     },
   },
+  palette: {
+    primary: {
+      main: "#8892af",
+      light: "#64ffda",
+    },
+  },
 });
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
