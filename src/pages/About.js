@@ -53,7 +53,7 @@ const About = () => {
             >
               Greeting! My name is Justice and I am passionate about crafting
               robust and scalable web applications that solve complex problems.
-              With several a year of experience working with a diverse range of
+              With a year of experience working with a diverse range of
               technologies, I have honed my skills in both front-end and
               back-end development, enabling me to build end-to-end solutions.
             </Typography>
@@ -63,7 +63,7 @@ const About = () => {
             >
               My ability to communicate effectively, work collaboratively and
               think critically, has enabled me to consistently deliver
-              high-quality code in projects. With a keen eye for detail and a
+              high-quality code in projects. With a keen eye for details and a
               commitment to staying up-to-date with emerging trends and
               technologies, I am always looking for new opportunities to
               challenge myself and make a positive impact.
