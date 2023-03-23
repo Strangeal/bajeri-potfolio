@@ -60,10 +60,10 @@ const Home = () => {
               width: { md: "60%" },
             }}
           >
-            My name is Bajeri Justice. I help people make the world a better
-            place through quality software. As a fullstack web developer, I
-            possess a wide range of skills and expertise that allow me to create
-            and maintain both the front-end and back-end of a website.
+            I help people make the world a better place through quality
+            software. As a full-stack web developer, I possess a wide range of
+            skills and expertise that allow me to create and maintain web
+            applications.
           </Typography>
           <Link
             href="https://www.linkedin.com/in/justice-bajeri/"
