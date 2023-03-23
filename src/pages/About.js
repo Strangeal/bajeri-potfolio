@@ -51,33 +51,28 @@ const About = () => {
               variant="body1"
               sx={{ mt: 4, fontFamily: "sans-serif" }}
             >
-              Hello! My name is Justice, and I am a multi-skilled full-stack
-              developer with hands-on experience in project development. I have
-              one year of experience working with both front-end technologies
-              (React/Redux) and back-end technologies (Ruby on Rails). I am a
-              good communicator and a team player, and I enjoy pair programming.
+              Greeting! My name is Justice and I am passionate about crafting
+              robust and scalable web applications that solve complex problems.
+              With several a year of experience working with a diverse range of
+              technologies, I have honed my skills in both front-end and
+              back-end development, enabling me to build end-to-end solutions.
             </Typography>
             <Typography
               variant="body1"
               sx={{ mt: 2, fontFamily: "sans-serif" }}
             >
-              Over the years, I have built more than 20 projects, ranging from
-              small to full-stack projects. Each project has presented its own
-              unique set of challenges, from technical obstacles to pair
-              programming challenges. These challenges have honed my skills in
-              problem-solving, collaboration, and innovation. By continually
-              pushing myself to learn new technologies and techniques, I have
-              been able to expand my capabilities and take on increasingly
-              complex projects.
+              My ability to communicate effectively, work collaboratively and
+              think critically, has enabled me to consistently deliver
+              high-quality code in projects. With a keen eye for detail and a
+              commitment to staying up-to-date with emerging trends and
+              technologies, I am always looking for new opportunities to
+              challenge myself and make a positive impact.
             </Typography>
             <Typography sx={{ mt: 2, fontFamily: "sans-serif" }}>
               In my free time, I enjoy watching movies, listening to music, and
               writing tutorials.
             </Typography>
-            <Typography sx={{ mt: 2, fontFamily: "sans-serif" }}>
-              I am currently working on improving my writing skills to create
-              tutorials that cover the skills I have learned over the years.
-            </Typography>
+
             <Box sx={{ mt: 2 }}>
               <Typography sx={{ fontFamily: "sans-serif" }}>
                 Here are a few technologies I've been working with recently:
@@ -108,11 +103,13 @@ const About = () => {
                       ▹
                     </Typography>
                     <Typography
+                      className="skills"
                       variant="body2"
                       sx={{
-                        fontSize: "0.8rem",
+                        fontSize: "0.9rem",
                         fontFamily: "sans-serif",
                         fontWeight: "300",
+                        color: "#CCD6F6",
                       }}
                     >
                       {skill.name}
