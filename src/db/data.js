@@ -26,7 +26,7 @@ const data = {
     },
     {
       project_name: "ClinixGo",
-      project_live_link: "https://clinixgo.up.railway.app/",
+      project_live_link: "https://clinixgo-production.up.railway.app/",
       project_description:
         "The project is based on an app to book an appointment with a health specialist(Doctor). The doctor appointment booking app permits healthcare providers to manage their appointments with increased efficiency while giving reliable management. However, it displays all details of the patients, complete history of appointment, analyses the doctors, etc",
       project_image:
