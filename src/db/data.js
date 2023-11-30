@@ -7,13 +7,38 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 const data = {
   skills: [
     { name: "JavaScript(ES6+)" },
+    { name: "TypeScript" },
     { name: "ReactJs" },
+    { name: "NextJs" },
     { name: "Redux" },
-    { name: "SQL" },
+    { name: "PostgresSQL" },
     { name: "Ruby" },
+    { name: "NodeJs" },
+    { name: "Prisma" },
     { name: "Ruby on Rails" },
   ],
   projects: [
+    {
+      project_name: "VibeView",
+      project_live_link: "https://vibeview.vercel.app/",
+      project_description:
+        "VibeView is a music streaming platform. It is a platform where users can bookmark their favorite movies and TV shows. Users have options to register and login to their account using credential and Oauth authentication.",
+      project_image:
+        "https://res.cloudinary.com/dxsom7jmx/image/upload/v1701302438/vibeview/Screenshot_2023-08-31_at_09.24.00_ymbxdz.png",
+      project_tech:
+        "ReactJs, NextJs, TypeScript, TailwindCSS, NodeJs(Prisma), PostgresSQL",
+      project_link: "https://github.com/Strangeal/Entertainment_app",
+    },
+    {
+      project_name: "UseForm",
+      project_live_link: "https://useform-teal.vercel.app/",
+      project_description:
+        "UseForm is a user-friendly landing page designed to simplify the creation of professional forms within minutes. It allows users to quickly and easily create professional forms with ease. ",
+      project_image:
+        "https://res.cloudinary.com/dxsom7jmx/image/upload/v1701303319/useForm/Screenshot_2023-11-30_at_00.15.00_mmoxvw.png",
+      project_tech: "ReactJs, NextJs, TypeScript, TailwindCSS",
+      project_link: "https://github.com/Strangeal/useform",
+    },
     {
       project_name: "Clickbank",
       project_live_link: "https://strangeal.github.io/clickbank/index.html",
@@ -60,10 +85,10 @@ const data = {
     { name: <GitHubIcon />, link: "https://github.com/Strangeal" },
     {
       name: <LinkedInIcon />,
-      link: "https://www.linkedin.com/in/justice-bajeri-0b7211243/",
+      link: "https://www.linkedin.com/in/justice-bajeri/",
     },
     { name: <AlternateEmailIcon />, link: "mailto:bajerijustice@gmail.com" },
-    { name: <TwitterIcon />, link: "https://twitter.com/Str_angeal" },
+    // { name: <TwitterIcon />, link: "https://twitter.com/Str_angeal" },
     { name: <InstagramIcon />, link: "https://www.instagram.com" },
   ],
 };
